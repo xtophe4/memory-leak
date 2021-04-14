@@ -2,6 +2,7 @@ import { Box, Button, Paper, Typography } from "@material-ui/core";
 import { result, calculateQuestion } from "./util";
 import { useEffect, useState } from "react";
 import "./App.css";
+import Scoreboard from "./Scoreboard";
 
 function App() {
   const [questionLeft, setQuestionLeft] = useState("");
@@ -124,6 +125,8 @@ function App() {
           </Paper>
         </Box>
       )}
+
+      {stopTimer === true && <Scoreboard score={countCorrectAnswer} />}
 
       {/* Scoreboard */}
 
